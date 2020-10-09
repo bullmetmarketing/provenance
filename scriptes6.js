@@ -224,7 +224,8 @@ const mainIe = () => {
     this.brSwiperContainer = this.page.querySelectorAll('.br-swiper-container');
     this.brSwiperWrapper = this.page.querySelectorAll('.br-swiper-wrapper');
     this.brHeader = this.page.querySelector('.br-header');
-    this.brSwiperToggle = this.page.querySelector('.br-swiper-toggle');
+    this.brSwiperToggle = this.page.querySelectorAll('.br-swiper-toggle');
+    this.brSwiperToggleTitle = this.page.querySelectorAll('.br-swiper-toggle-title');
     this.brSwiperDefault = this.page.querySelectorAll('.default');
     this.brHistoryImgContainer = this.page.querySelectorAll('.br-history-se-ctnt-block-img-container')
     this.brHistoryImg = this.page.querySelectorAll('.br-history-se-ctnt-block-img')
@@ -248,6 +249,7 @@ const mainIe = () => {
       this.toggleIeClasses(selectors.brHistoryBlock, 'br-history-se-ctnt-block');
       this.toggleIeClasses(selectors.brHeader, 'br-header');
       this.toggleIeClasses(selectors.brSwiperToggle, 'br-swiper-toggle');
+      this.toggleIeClasses(selectors.brSwiperToggleTitle, 'br-swiper-toggle-title');
       this.addProductCTA();
     }
     this.toggleIeClasses = (selectorsNode, className) => {

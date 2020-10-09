@@ -267,7 +267,8 @@ var mainIe = function mainIe() {
     this.brSwiperContainer = this.page.querySelectorAll('.br-swiper-container');
     this.brSwiperWrapper = this.page.querySelectorAll('.br-swiper-wrapper');
     this.brHeader = this.page.querySelector('.br-header');
-    this.brSwiperToggle = this.page.querySelector('.br-swiper-toggle');
+    this.brSwiperToggle = this.page.querySelectorAll('.br-swiper-toggle');
+    this.brSwiperToggleTitle = this.page.querySelectorAll('.br-swiper-toggle-title');
     this.brSwiperDefault = this.page.querySelectorAll('.default');
     this.brHistoryImgContainer = this.page.querySelectorAll('.br-history-se-ctnt-block-img-container');
     this.brHistoryImg = this.page.querySelectorAll('.br-history-se-ctnt-block-img');
@@ -302,6 +303,8 @@ var mainIe = function mainIe() {
       _this3.toggleIeClasses(selectors.brHeader, 'br-header');
 
       _this3.toggleIeClasses(selectors.brSwiperToggle, 'br-swiper-toggle');
+
+      _this3.toggleIeClasses(selectors.brSwiperToggleTitle, 'br-swiper-toggle-title');
 
       _this3.addProductCTA();
     };

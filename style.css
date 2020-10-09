@@ -351,6 +351,9 @@ p.br-swiper-toggle-title{
   margin: 0;
   padding: 0;
 }
+p.br-swiper-toggle-title-ie{
+  display:none;
+}
 article.br-swipe-product-info p.br-swipper-product-counter{
   margin: 0;
   padding: 0;
