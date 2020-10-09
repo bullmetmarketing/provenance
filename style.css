@@ -146,9 +146,12 @@ section.br-header{
   background-position: center;
   background-repeat: no-repeat;
   background-color: #070707;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-top: 60px;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 section.br-header img{
   width: 50%;

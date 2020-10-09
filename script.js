@@ -38,7 +38,7 @@ var main = function main() {
       model.containerWidth = selectors.brSwiperContainer.offsetWidth;
       model.productWidth = model.containerWidth / model.productsToShow;
       model.productList.forEach(function (product) {
-        product.style.width = model.productWidth + "px";
+        product.style.width = "".concat(model.productWidth, "px");
       });
     };
 
@@ -61,7 +61,7 @@ var main = function main() {
       if (model.productList.length === 1) {
         selectors.brSwiperFocus = model.productList[centralPosition];
         selectors.brSwiperFocus.classList.add('focus');
-        selectors.selectedSwiper.style.left = "-" + model.productWidth * swiperPosition + "px";
+        selectors.selectedSwiper.style.left = "-".concat(model.productWidth * swiperPosition, "px");
 
         _this.createProductCTA(selectors.brSwiperFocus);
 
@@ -80,7 +80,7 @@ var main = function main() {
       selectors.brSwiperFocus.classList.add('focus');
       selectors.brSwiperPrev.classList.add('prev');
       selectors.brSwiperNext.classList.add('next');
-      selectors.selectedSwiper.style.left = "-" + model.productWidth * swiperPosition + "px";
+      selectors.selectedSwiper.style.left = "-".concat(model.productWidth * swiperPosition, "px");
 
       _this.createProductCTA(selectors.brSwiperFocus);
     };
@@ -92,7 +92,7 @@ var main = function main() {
       var productLink = selector.querySelector('a').getAttribute('href');
       selectors.brSwiperProductInfo.innerHTML = productInfo;
       selectors.brSwiperProductPrize.innerHTML = productPrize;
-      selectors.brSwiperProductCounter.innerHTML = "Producto <span>" + productOrder + "</span> de <span>" + model.productList.length + "</span>";
+      selectors.brSwiperProductCounter.innerHTML = "Producto <span>".concat(productOrder, "</span> de <span>").concat(model.productList.length, "</span>");
       selectors.brSwiperProductCTA.setAttribute('href', productLink);
     };
 
@@ -106,8 +106,8 @@ var main = function main() {
 
     this.swipeOne = function (direction) {
       var previousLeft = parseFloat(selectors.selectedSwiper.style.left);
-      direction === 'left' && (selectors.selectedSwiper.style.left = previousLeft - model.productWidth + "px");
-      direction === 'right' && (selectors.selectedSwiper.style.left = previousLeft + model.productWidth + "px");
+      direction === 'left' && (selectors.selectedSwiper.style.left = "".concat(previousLeft - model.productWidth, "px"));
+      direction === 'right' && (selectors.selectedSwiper.style.left = "".concat(previousLeft + model.productWidth, "px"));
     };
 
     this.resetClasses = function () {
@@ -165,7 +165,7 @@ var main = function main() {
       var previousLeft = parseFloat(selectors.selectedSwiper.style.left);
       view.setProductWidth();
       var reducctionFactor = previousWidth / model.productWidth;
-      selectors.selectedSwiper.style.left = previousLeft / reducctionFactor + "px";
+      selectors.selectedSwiper.style.left = "".concat(previousLeft / reducctionFactor, "px");
     };
 
     this.onPrevious = function () {
@@ -310,7 +310,7 @@ var mainIe = function mainIe() {
       var selectorsListToArray = Array.apply(null, selectorsNode);
       selectorsListToArray.forEach(function (e) {
         e.className = "";
-        e.classList.add(className + "-ie");
+        e.classList.add("".concat(className, "-ie"));
       });
     };
 
@@ -366,7 +366,7 @@ var mainNoSwiper = function mainNoSwiper() {
       var selectorsListToArray = Array.apply(null, selectorsNode);
       selectorsListToArray.forEach(function (e) {
         e.className = "";
-        e.classList.add(className + "-ie");
+        e.classList.add("".concat(className, "-ie"));
       });
     };
 
